@@ -1,0 +1,971 @@
+
+/* START SMALL SCREEN*/
+
+.container{
+	height: 667px;
+	padding: 1%;
+	background: linear-gradient(
+    to bottom right,  
+    #FFF5AC, #45C8E6,
+    #71DAF2,#74BF97,
+    #FFC371,#FA909A,
+    #4396D1,#4396D1);
+    background-repeat: no-repeat;
+  	background-size: 1000% 1000%;
+  	animation: gradient 86400s linear infinite;
+} 
+
+/*GRADIENT*/
+
+@keyframes gradient { 
+  0%{background-position:0% 0%}
+  50%{background-position:100% 100%}
+  100%{background-position:0% 0%}
+}
+
+/*BOXEN**/
+
+#box1{
+	box-sizing: border-box;
+	grid-area: boxeen;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#box2{
+	box-sizing: border-box;
+	background:rgba(255,255,255, 0.4);;
+	grid-area: boxtwee;
+	display: flex;
+	flex-direction: row;
+}
+
+#box3{
+	background:rgba(255,255,255, 0.5);;
+	grid-area: boxdrie;
+}
+
+
+/** BOX 1 KLOK*/
+
+.clock{
+	width: 250px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	background: url(/Users/roossmeets/Desktop/IXT2/Root_Challenge2/content/klok.svg);
+	background-size: cover;
+	border-radius: 50%;
+	border: 5px solid white;
+	box-shadow: inset 0 0 5px rgba(0,0,0,.1), 0 5px 5px rgba(0,0,0,.2), 0 0 0 4px rgba(255,255,255,1);
+}
+
+.clock::before{
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background-color: white;
+	border: 2px solid #fff;
+	z-index: 100000;
+	border-radius: 50%; 
+	display: flex;
+	align-self: center;
+}
+
+.hour, .min, .sec{
+	position: absolute;
+}
+
+.hour, .hr{
+	height: 250px;
+	width: 200px;
+}
+
+.min, .mn{
+	height: 250px;
+	width: 250px;
+}
+.sec, .sc{
+	height: 250px;
+	width: 200px;
+}
+
+.hr, .mn, .sc{
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	border-radius: 50%;
+}
+
+
+.hr::before{
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 60px;
+	background-color: white;
+	z-index: 10;
+	top: 60px;
+	border-radius: 6px 6px 0 0;
+}
+
+
+.mn::before{
+	content: "";
+	position: absolute;
+	width: 6px;
+	height: 90px;
+	background-color: white;
+	z-index: 11;
+	top: 30px;
+	border-radius: 6px 6px 0px 0px;
+}
+
+
+.sc::before{
+	content: "";
+	position: absolute;
+	width: 2px;
+	height: 100px;
+	background-color: red;
+	z-index: 12;
+	top: 15px;
+	border-radius: 6px 6px 0px 0px;
+}
+
+/* BOX 2*/
+#box2 > div:nth-child(1){
+	width: 45%;
+	margin-left: 2%;
+	display: flex;
+	flex-wrap: row;
+	flex-wrap: wrap;
+}
+
+#graden{
+	width: 50%;
+	margin-left: 10%;
+}
+
+#box2 > div:nth-child(1) > h1{
+	font-size: 1em;
+	height: 5%;
+	margin-top: 5%;
+	margin-bottom: 0%;
+}
+
+#graden > p:nth-child(1){
+	color: white;
+	font-size: 3em;
+	font-weight: bold;
+	margin: 0px;
+}
+
+#graden > p:nth-child(2){
+	color: white;
+	margin: 0px;
+}
+
+#box2 > div:nth-child(1) > img{
+	height: 40px;
+	margin-left: 5%;
+	display: flex;
+	align-self: flex-start;
+}
+
+
+#box2 > div:nth-child(2){
+	width: 55%;
+}
+#box2 > div > div > p{
+	color: white;
+	width: 50%;
+	margin: 0px;
+	margin-right: 10%;
+}
+
+#box2 > div:nth-child(2) > div{
+	display: flex;
+	flex-direction: row;
+	height: 50%;
+}
+
+#box2 > div:nth-child(2){
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 5%;
+}
+
+#box2 > div:nth-child(2) > div > p > img{
+	height: 20px;
+	margin-left: 5%;
+}
+
+/* BOX 3**/
+#box3 > p:nth-child(3){
+	margin-bottom: 0px;
+}
+
+#box3 > p{
+	font-size: 1em;
+	font-weight: normal;
+	color: white;
+}
+#box3{
+	padding-left: 3%;
+}
+
+#minutes{
+  display: inline;
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+}
+
+#seconds{
+  display: inline;
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+
+}
+
+#days{
+  display: inline;
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+}
+
+#hours{
+  display: inline;
+  font-size: 1.8em;
+  color: white;
+  font-weight: bold;
+
+}
+#timer > li{
+	font-size: 0.8em;
+	list-style: none;
+	margin-right: 1%;
+	color: white;
+	
+}
+
+#timer > ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-self: flex-end;;
+	padding: 4%;
+	width: 90%;
+	margin: 0px;
+
+}
+
+
+#timer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0px;
+}
+
+
+
+
+/**ANIMATIE*/
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.hour {
+  animation: rotate 43200s infinite linear;
+}
+.min {
+  animation: rotate 3600s infinite linear;
+}
+/*.sec {
+  animation: rotate 60s infinite linear;
+}*/
+
+.min {
+  animation: rotate 3600s infinite steps(60);
+}
+/*.sec {
+  animation: rotate 60s infinite steps(60);
+}
+*/
+
+
+/**grid*/
+
+#grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 2.5fr 1fr 1fr;
+	grid-row-gap: 2%;
+	grid-template-areas: "boxeen boxeen"
+	"boxtwee boxtwee"
+	"boxdrie boxdrie"
+	;
+}
+
+/* END SMALL SCREEN*/
+
+@media only screen and (min-width: 600px) and (max-width: 914px){
+
+/* START MIDDLE SCREEN*/
+.container{
+	height: 1000px;
+	padding: 1%;
+}
+
+/*KLOK*/
+
+
+.clock{
+	width: 450px;
+	height: 450px;
+}
+
+.clock::before{
+	width: 40px;
+	height: 40px;
+}
+
+.hour, .hr{
+	height: 450px;
+	width: 400px;
+}
+
+.min, .mn{
+	height: 450px;
+	width: 450px;
+}
+.sec, .sc{
+	height: 450px;
+	width: 400px;
+}
+
+
+.hr::before{
+	width: 16px;
+	height: 110px;
+	top: 100px;
+}
+
+
+.mn::before{
+	width: 12px;
+	height: 160px;
+	top: 50px;
+
+}
+
+.sc::before{
+	width: 4px;
+	height: 190px;
+	top: 30px;
+}
+/** BOX2*/
+#box2{
+	display: flex;
+	flex-direction: column;
+	padding-top: 3%;
+	height: 90%;
+}
+#box2 > div:nth-child(1){
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+#graden{
+	width: 50%;
+	margin-left: 10%;
+}
+#box2 > div:nth-child(1) > h1{
+	font-size: 1.5em;
+	margin-top: 0px;
+
+	margin-bottom: 5%;
+}
+
+#graden{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	margin-left: 3%;
+}
+
+#graden > p:nth-child(1){
+	font-size: 4em;
+	margin-top: 10px;
+	width: 35%;
+}
+
+#graden > p:nth-child(2){
+	font-size: 1.5em;
+	margin-top: 50px;
+
+}
+
+#box2 > div:nth-child(1) > img{
+	height: 50px;
+	position: absolute;
+	left:35%;
+}
+
+
+#box2 > div:nth-child(2){
+	width: 100%;
+	margin-top: 0%;
+	margin-left: 3%;
+}
+#box2 > div > div > p{
+	font-size: 1.5em;
+	color: white;
+	width: 45%;
+	margin: 0px;
+	margin-right: 15px;
+}
+
+#box2 > div:nth-child(2) > div{
+	display: flex;
+	flex-direction: row;
+	height: 50%;
+}
+
+#box2 > div:nth-child(2){
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 5%;
+}
+
+#box2 > div:nth-child(2) > div > p > img{
+	height: 25px;
+	margin-left: 10%;
+}
+
+/* BOX3*/
+#box3 > p:nth-child(1){
+	margin-top: 0px;
+}
+
+#box3 > p:nth-child(3){
+	margin-bottom: 0px;
+}
+
+#box3 > p{
+	font-size: 1.5em;
+}
+#box3{
+	box-sizing: border-box;
+	padding-left: 3%;
+	padding-top: 3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 90%;
+}
+
+#minutes{
+  font-size: 2.2em;
+  margin-right: 2px;
+}
+
+#seconds{
+  font-size: 2.2em;
+   margin-right: 2px;
+}
+
+#days{
+  font-size: 2.2em;
+   margin-right: 2px;
+}
+
+#hours{
+  font-size: 2.2em;
+   margin-right: 2px;
+
+}
+#timer > li:nth-child(3){
+	margin-right: 25.5%;
+}
+
+
+#timer > li{
+	font-size: 1.2em	
+}
+
+#timer > ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-self: flex-end;;
+	padding: 4%;
+	width: 90%;
+	margin: 8px;
+
+}
+
+#timer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 0px;
+}
+
+
+/**grid*/
+
+#grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 4fr 1fr 1fr;
+	grid-row-gap: 2%;
+	grid-column-gap: 2%;
+	grid-template-areas: "boxeen boxeen"
+	"boxtwee boxdrie"
+	"boxtwee boxdrie"
+	;
+}
+
+
+
+/* END MIDDLE SCREEN*/
+
+}
+
+@media only screen and (min-width: 914px) and (max-width: 1200px){
+
+/* START LARGE SCREEN*/
+
+.container{
+	height: 800px;
+	padding: 1%;
+}
+
+/*KLOK*/
+
+.clock{
+	width: 500px;
+	height: 500px;
+}
+
+.clock::before{
+	width: 50px;
+	height: 50px;
+}
+
+.hour, .hr{
+	height: 500px;
+	width: 500px;
+}
+
+.min, .mn{
+	height: 500px;
+	width: 500px;
+}
+.sec, .sc{
+	height: 500px;
+	width: 500px;
+}
+
+
+.hr::before{
+	width: 16px;
+	height: 120px;
+	top: 110px;
+}
+
+
+.mn::before{
+	width: 12px;
+	height: 180px;
+	top: 50px;
+
+}
+
+.sc::before{
+	width: 4px;
+	height: 210px;
+	top: 30px;
+}
+
+
+/* BOX 2 **/
+
+
+#box2{
+	box-sizing: border-box;
+	width: 60%;
+	margin-left: 20%;
+}
+
+
+#graden{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	margin-left: 3%;
+}
+
+#graden > p:nth-child(1){
+	font-size: 4em;
+	width: 35%;
+	margin: 0px;
+}
+
+#graden > p:nth-child(2){
+	font-size: 1.5em;
+	margin-top: 40px;
+}
+
+#box2 > div:nth-child(2){
+	width: 50%;
+	margin-top: 0%;
+	margin-left: 3%;
+}
+#box2 > div > div > p{
+	font-size: 1.5em;
+	color: white;
+	width: 45%;
+	margin: 0px;
+	margin-right: 27px;
+}
+
+#box2 > div:nth-child(2) > div{
+	display: flex;
+	flex-direction: row;
+	height: 50%;
+	margin-bottom: 20px;
+}
+
+#box2 > div:nth-child(2){
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-top: 5%;
+}
+
+#box2 > div:nth-child(2) > div > p > img{
+	height: 25px;
+	margin-left: 10%;
+}
+
+
+/* BOX 3*/
+
+#box3{
+	box-sizing: border-box;
+	width: 60%;
+	margin-left: 20%;
+	padding: 0px;
+
+}
+
+#box3 > p:nth-child(1){
+	margin-top: 2%;
+	margin-left: 2%;
+}
+
+#box3 > p:nth-child(3){
+	margin-bottom: 0px;
+	margin-left: 2%;
+}
+
+#box3 > p{
+	font-size: 1em;
+}
+#box3{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+#minutes{
+  font-size: 2em;
+  margin-right: 2px;
+}
+
+#seconds{
+  font-size: 2em;
+   margin-right: 2px;
+}
+
+#days{
+  font-size: 2em;
+   margin-right: 2px;
+}
+
+#hours{
+  font-size: 2em;
+   margin-right: 2px;
+
+}
+
+#timer > li{
+	font-size: 1em	
+}
+
+#timer > ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-self: flex-end;;
+	padding: 4%;
+	width: 90%;
+	margin: 8px;
+
+}
+
+#timer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 0px;
+}
+
+
+/**grid*/
+
+#grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 3.5fr 1fr 1fr;
+	grid-row-gap: 2%;
+	grid-column-gap: 2%;
+	grid-template-areas: "boxeen boxeen"
+	"boxtwee boxtwee"
+	"boxdrie boxdrie"
+	;
+}
+
+
+/* END LARGE SCREEN*/
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px){
+
+/* START XL SCREEN*/
+
+.container{
+	height: 800px;
+	padding: 1%;
+}
+
+/* KLOK*/
+
+.clock{
+	width: 550px;
+	height: 550px;
+}
+
+.clock::before{
+	width: 60px;
+	height: 60px;
+}
+
+.hour, .hr{
+	height: 550px;
+	width: 550px;
+}
+
+.min, .mn{
+	height: 550px;
+	width: 550px;
+}
+.sec, .sc{
+	height: 550px;
+	width: 550px;
+}
+
+
+.hr::before{
+	width: 16px;
+	height: 130px;
+	top: 120px;
+}
+
+
+.mn::before{
+	width: 12px;
+	height: 200px;
+	top: 50px;
+
+}
+
+.sc::before{
+	width: 4px;
+	height: 210px;
+	top: 40px;
+}
+
+/* BOX 2*/
+
+#box2{
+	box-sizing: border-box;
+	height: 75%;
+	width: 80%;
+	margin-top: 20%;
+	display: flex;
+	flex-direction: column;
+
+}
+
+#box2 > div:nth-child(1){
+	width: 100%;
+	height: 50%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: 3%;
+}
+
+#box2 > div:nth-child(1) > h1{
+	font-size: 1.8em;
+}
+
+#graden{
+	width: 100%;
+	margin-right: 10px;
+	margin-top: 5%;
+	display: flex;
+	flex-direction: row;
+}
+
+#graden > p:nth-child(1){
+	font-size: 4.5em;
+}
+
+#graden > p:nth-child(2){
+	font-size: 1.8em;
+	margin-top: 40px;
+	margin-right: 60px;
+}
+
+#box2 > div:nth-child(2) > div > p{
+	font-size: 1.5em;
+}
+
+#box2 > div:nth-child(2){
+	width: 100%;
+	height: 50%;
+	margin-left: 3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+	margin-top: 10%;
+}
+
+/* BOX 3*/
+
+#box3{
+	box-sizing: border-box;
+	height: 75%;
+	width: 80%;
+
+}
+
+
+#box3 > p:nth-child(1){
+	font-size: 1.8em;
+	margin-top: 2%;
+}
+
+#box3 > p:nth-child(3){
+	font-size: 1.5em;
+	margin-top: 10%;
+}
+
+#minutes{
+  font-size: 2em;
+  margin-right: 2px;
+}
+
+#seconds{
+  font-size: 2em;
+   margin-right: 2px;
+}
+
+#days{
+  font-size: 2em;
+   margin-right: 2px;
+}
+
+#hours{
+  font-size: 2em;
+   margin-right: 2px;
+
+}
+
+#timer > li{
+	font-size: 1.2em	
+}
+
+#timer > li:nth-child(3){
+	margin-right: 17.5%;
+}
+
+
+#timer > ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-self: flex-end;;
+	padding: 4%;
+	width: 90%;
+	height: 100%;
+	margin: 8px;
+
+}
+
+#timer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin: 0px;
+}
+
+
+/**grid*/
+
+#grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-row-gap: 2%;
+	grid-column-gap: 2%;
+	grid-template-areas: 
+	"boxeen boxeen boxtwee"
+	"boxeen boxeen boxtwee"
+	"boxeen boxeen boxdrie "
+	"boxeen boxeen boxdrie"
+	;
+}
+
+/* END XL SCREEN*/
+
+}
+

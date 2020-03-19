@@ -1,0 +1,30 @@
+@font-face{
+	font-family: "Lato-Regular.ttf";
+	src: url("fonts/Lato-Regular.tt");
+	src: url("fonts/Lato-bold.tt");
+
+}
+
+h1{
+	font-family: Lato-bold;
+	font-weight: normal;
+	color: white;
+}
+
+
+p{
+	font-family: Lato-Bold;
+	font-weight: normal;
+
+}
+
+ul > li{
+	font-family: Lato-Regular;
+
+}
+
+
+
+#timer > li{
+	font-family: lato-Regular;
+}
