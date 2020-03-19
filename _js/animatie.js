@@ -17,6 +17,36 @@
    	})
 
 
+  function changebg(){
+    var now = new Date();
+    var hours = now.getHours();
+    const bg = document.querySelector('.container')
+
+    if( hours > 5 && hours < 11){
+    bg.style.setProperty('background', '#FFF5AC, #45C8E6');
+    }
+
+    if( hours > 11 && hours < 17){
+     bg.style.setProperty('background-color', '#71DAF2,#74BF97');
+    }
+
+
+    if( hours > 17 && hours < 19){
+     bg.style.setProperty('background', '#FFC371,#FA909A');
+    }
+
+
+    if( hours > 19 && hours < 22){
+       bg.style.setProperty('background', '#4396D1,#4396D1');
+     }
+
+    if( hours > 22 && hours < 5){
+       bg.style.setProperty('background', '#4B6CB7, #182848');
+      }
+  };
+
+
+
 /**Timer1*/
 
 const second = 1000,
