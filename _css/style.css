@@ -55,7 +55,7 @@
 	display: flex;
 	justify-content: center;
 	align-self: center;
-	background: url(/Users/roossmeets/Desktop/IXT2/Root_Challenge2/content/klok.svg);
+	background: url(../content/klok.svg);
 	background-size: cover;
 	border-radius: 50%;
 	border: 5px solid white;
