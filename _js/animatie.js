@@ -1,6 +1,6 @@
 
 
- /**klok*/
+ /**analoge klok*/
 	 	const deg = 6;
 	 	const hr = document.querySelector("#hr");
 	 	const mn = document.querySelector("#mn");
@@ -16,7 +16,7 @@
 
    	})
 
-
+/* Achtergrond veranderen per dag deel**/
   function changebg(){
     var now = new Date();
     var hours = now.getHours();
